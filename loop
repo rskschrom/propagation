@@ -1,2 +1,2 @@
 #!/bin/bash
-convert wv_*.png +repage -loop 0 -delay 20 wv_add.gif
+convert wv_*.png +repage -loop 1 -delay 50 wv_add.gif
