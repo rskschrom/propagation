@@ -12,7 +12,7 @@ xmax = 10.
 ymin = -10.
 ymax = 10.
 
-numpar = 2000
+numpar = 1000
 rx = np.random.rand(numpar)*(xmax-xmin)+xmin
 ry = np.random.rand(numpar)*(ymax-ymin)+ymin
 rz = np.random.rand(numpar)*(zmax-zmin)+zmin
@@ -29,7 +29,7 @@ ki = 0.2
 omg = k*1.
 t = 0.
 hv_rat = 2.
-sh = 0.1
+sh = 0.3
 sv = sh/hv_rat
 
 # add waves at observation point
@@ -45,7 +45,7 @@ inwv = np.cos(k*obz-omg*time)
 wvsumh = 0.
 wvsumv = 0.
 pltind = 0
-step = 50
+step = 20
 pltcnt = -1
 parind = 0
 
@@ -108,7 +108,7 @@ for i in range(numpar):
         lg.draw_frame(False)
 
         imgname = 'wv_sum_{:03d}.png'.format(pltind)
-        plt.savefig(imgname, dpi=60)
+        plt.savefig(imgname, dpi=45)
         plt.close()
         pltind = pltind+1
         os.system('convert -trim {} {}'.format(imgname, imgname))
